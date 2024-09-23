@@ -24,6 +24,7 @@ const App: React.FC = () => {
             height: "36px",
             top: "60px",
             left: "115px",
+            imageRendering: "auto",
           }}
         />
       </a>
@@ -38,6 +39,7 @@ const App: React.FC = () => {
           alt="GitHub"
           className="github.png"
           style={{
+            imageRendering:"auto",
             position: "fixed",
             width: "45px",
             height: "36px",
@@ -47,8 +49,18 @@ const App: React.FC = () => {
         />
       </a>
 
-      <h1 className="opener">Welcome to my portfolio website!</h1>
-      <img src={mycomp} style={{position:"absolute",top:"85px", left:"990px", width:"65px",height:"auto"}}/>
+      <h1 className="opener">Welcome to my portfolio website! </h1>
+      <img
+        src={mycomp}
+        className="myImage"
+      />
+
+      <p className="openingP">
+        
+        Hi, I'm Trung, a first-generation Vietnamese student and Senior in
+        Computer Science. I'm seeking an internship to enhance my skills in
+        mobile app development and broader computer science roles.
+      </p>
     </div>
   );
 };

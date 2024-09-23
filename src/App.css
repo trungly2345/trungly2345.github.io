@@ -36,18 +36,53 @@ body{
 
 .opener{
   font-family: 'Merriweather', serif;  
-  position: absolute;
-  left: 450px;
-  top:85px;
+  position: fixed;
+  left: 50%;
+  top:105px;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  max-width: 650px;
   size: 24px;
   font-weight: 300;
+  text-align: justify;
+  display: block;
+  margin: 0 auto;
+  transform: translateX(-50%);
  
-
 }
 
-.openingP{
+.openingP{ 
+position:fixed;
+  font-family: 'Merriweather',serif;
+  left: 50%;
+  top: 175px;
+  width: 100%;
+  transform: translateX(-50%);
+  max-width: 650px; /* Limits the width so it doesn't stretch too much */
+  margin: 0 auto; /* Centers the paragraph */
+  padding-left: auto;
+  padding-right: auto;
+  line-height: 1.5; /* Improves readability */
+  text-align: justify; /* Makes both sides aligned */
+  display: block;
+  transition: all 0.3s ease-in-out; /* Adds smooth transitions for any changes */
   
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shrinkable-paragraph p{
+      max-width: 90%; /* Makes the paragraph shrink on smaller screens */
+      padding: 10px;
+      margin: 0 5%;
+  }
+}
+
+.myImage{
+  width: 43px;
+  height: 57px;
+  position: fixed;
+  image-rendering: auto;
+  top: 100px;
+  left: 1025px;
 }
