@@ -1,0 +1,42 @@
+
+
+.container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    height: 100vh; 
+}
+
+.myButton, .cvButton {
+    border-radius: 20px; /* Rounded corners */
+    padding: 1em 2em; /* Padding for buttons */
+    font-size: 1rem; /* Base font size */
+    background-color: aliceblue; /* Button background color */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin: 0.5em; /* Margin for spacing */
+    max-width: 200px; /* Limit the width for desktop views */
+    min-width: 1px;
+    width: 100%;  /* Make them responsive */
+   
+}
+
+
+
+
+
+@media (max-width: 100px) {
+    .contactButton, .cvButton {
+        font-size: 0.9rem; /* Smaller font size */
+        padding: 0.8em 1.5em; /* Adjust padding for smaller screens */
+        width: 1%; /* Full width in smaller screens */
+    
+    
+        max-width: none; /* Remove max-width on smaller screens if needed */
+    }
+}
+
+.myButton:hover {
+    background-color: bisque;
+}

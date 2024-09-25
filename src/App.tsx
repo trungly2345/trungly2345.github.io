@@ -3,10 +3,17 @@ import "./App.css";
 import il from "./assets/li.svg";
 import github from "./assets/github.png";
 import mycomp from "./assets/My Computer.svg";
+import t from "./assets/me.svg";
+import ButtonComponent from "./ButtonComponent";
+
+
 
 const App: React.FC = () => {
+  
   return (
+
     <div>
+      
       <h1 className="nametxt">Trung Ly </h1>
       <div className="rectangle-1"></div>
       <a
@@ -39,7 +46,7 @@ const App: React.FC = () => {
           alt="GitHub"
           className="github.png"
           style={{
-            imageRendering:"auto",
+            imageRendering: "auto",
             position: "fixed",
             width: "45px",
             height: "36px",
@@ -50,17 +57,30 @@ const App: React.FC = () => {
       </a>
 
       <h1 className="opener">Welcome to my portfolio website! </h1>
-      <img
-        src={mycomp}
-        className="myImage"
-      />
+      <img src={mycomp} className="myImage" />
 
       <p className="openingP">
-        
         Hi, I'm Trung, a first-generation Vietnamese student and Senior in
-        Computer Science. I'm seeking an internship to enhance my skills in
-        mobile app development and broader computer science roles.
+        Computer Science at Iowa State University. I'm seeking an internship to
+        enhance my skills in mobile app development and broader computer science
+        roles.
+        <br></br>
+        <br></br>
+        Passionate about technology's role in shaping society, I aim to
+        contribute to innovations that improve everyday life. Let's connect to
+        explore how I can bring my skills and enthusiasm to a dynamic team.
       </p>
+       <ButtonComponent />
+      <img
+        src={t}
+        alt="Trung Ly"
+        className="me.svg"
+        style={{ position: "fixed", left: "1122px",top: "76px", imageRendering:"-moz-crisp-edges"}}
+      />
+
+
+      
+    
     </div>
   );
 };

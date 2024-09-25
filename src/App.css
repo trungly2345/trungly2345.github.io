@@ -1,9 +1,13 @@
 /* App.css */
+:root{
+  --background-color: #DADADA;
+}
+
 body{
   
-  background-color: #DADADA;
-
   
+overflow: hidden;
+  background-color: var(--background-color);
   
 }
 
@@ -39,15 +43,26 @@ body{
   position: fixed;
   left: 50%;
   top:105px;
-  white-space: nowrap;
   max-width: 650px;
-  size: 24px;
+  size: 1.5rem;
   font-weight: 300;
   text-align: justify;
   display: block;
   margin: 0 auto;
   transform: translateX(-50%);
- 
+  white-space: normal;
+}
+
+@media (max-width: 790px) {
+  .opener, .openingP {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1444px) {
+  .opener, .openingP, .myImage {
+    font-size: 16px;
+  }
 }
 
 .openingP{ 
@@ -55,28 +70,22 @@ position:fixed;
   font-family: 'Merriweather',serif;
   left: 50%;
   top: 175px;
-  width: 100%;
+  width: auto;
   transform: translateX(-50%);
   max-width: 650px; /* Limits the width so it doesn't stretch too much */
   margin: 0 auto; /* Centers the paragraph */
   padding-left: auto;
   padding-right: auto;
   line-height: 1.5; /* Improves readability */
-  text-align: justify; /* Makes both sides aligned */
+  text-align: left; /* Makes both sides aligned */
   display: block;
   transition: all 0.3s ease-in-out; /* Adds smooth transitions for any changes */
-  
+  white-space: n;
 }
 
 
-/* Responsive */
-@media (max-width: 768px) {
-  .shrinkable-paragraph p{
-      max-width: 90%; /* Makes the paragraph shrink on smaller screens */
-      padding: 10px;
-      margin: 0 5%;
-  }
-}
+
+
 
 .myImage{
   width: 43px;
