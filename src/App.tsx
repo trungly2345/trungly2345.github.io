@@ -4,23 +4,24 @@ import il from "./assets/li.svg";
 import github from "./assets/github.png";
 import mycomp from "./assets/My Computer.svg";
 import t from "./assets/me.svg";
-import ButtonComponent from "./ButtonComponent";
-
-
+import Button from "./components/Button";
 
 const App: React.FC = () => {
-  
-  return (
+  // 1 Lifecycle methods (Hooks) - useState(), useEffect()
+  // 2 Making components
 
+  // Make a contact me form
+  // Take an imput of someones email, and message
+  // Then send yourself an email based of the data
+
+  // 3 LEARN ABOUT FLEX BOX!!
+  return (
     <div>
-      
-      <h1 className="nametxt">Trung Ly </h1>
-      <div className="rectangle-1"></div>
+      <h5 className="nametxt">Trung Ly</h5>
       <a
         href="https://www.linkedin.com/in/trung-ly-30151b184/"
         target="blank"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         <img
           src={il}
           alt="LinkedIn"
@@ -55,32 +56,43 @@ const App: React.FC = () => {
           }}
         />
       </a>
-
-      <h1 className="opener">Welcome to my portfolio website! </h1>
       <img src={mycomp} className="myImage" />
+      <div className="container text-center">
+        <h1 className="opener"> Welcome to my portfolio website!</h1>
+        <p className="openingP">
+          Hi, I'm Trung, a first-generation Vietnamese student and Senior in
+          Computer Science at Iowa State University. I'm seeking an internship
+          to enhance my skills in mobile app development and broader computer
+          science roles.
+          <br></br>
+          <br></br>
+          Passionate about technology's role in shaping society, I aim to
+          contribute to innovations that improve everyday life. Let's connect to
+          explore how I can bring my skills and enthusiasm to a dynamic team.
+        </p>
 
-      <p className="openingP">
-        Hi, I'm Trung, a first-generation Vietnamese student and Senior in
-        Computer Science at Iowa State University. I'm seeking an internship to
-        enhance my skills in mobile app development and broader computer science
-        roles.
-        <br></br>
-        <br></br>
-        Passionate about technology's role in shaping society, I aim to
-        contribute to innovations that improve everyday life. Let's connect to
-        explore how I can bring my skills and enthusiasm to a dynamic team.
-      </p>
-       <ButtonComponent />
+        {/* Contact and download button */}
+        <div className="d-grid gap-2 d-md-block">
+          <Button
+            whenClicked={() => {
+              console.log("clicked");
+            }}
+            msg="Contact Me"
+          />
+          <Button whenClicked={() => {}} msg="Download CV" />
+        </div>
+      </div>
       <img
         src={t}
         alt="Trung Ly"
         className="me.svg"
-        style={{ position: "fixed", left: "1122px",top: "76px", imageRendering:"-moz-crisp-edges"}}
+        style={{
+          position: "fixed",
+          left: "1122px",
+          top: "76px",
+          imageRendering: "-moz-crisp-edges",
+        }}
       />
-
-
-      
-    
     </div>
   );
 };

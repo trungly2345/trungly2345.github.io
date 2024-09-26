@@ -3,13 +3,8 @@
   --background-color: #DADADA;
 }
 
-body{
-  
-  
-overflow: hidden;
-  background-color: var(--background-color);
-  
-}
+
+
 
 
 .nametxt {
@@ -21,77 +16,57 @@ overflow: hidden;
   font-family: 'Merriweather', serif;  
   font-weight: 300;     /* Light font weight */
   word-wrap: break-word; /* Break long words */
-  top: 12px;
-  left: 120px;
+  top: 16px;
+  left: 118.5px;
   right: 1137px;
-}
-
-.rectangle-1 {
-  position:fixed;
-  left: 116px;
-  top: 0px;
-  width: 113px;
-  height: 14px;
-  flex-shrink: 0;
-  background: #000;
-  
 }
 
 
 .opener{
   font-family: 'Merriweather', serif;  
-  position: fixed;
-  left: 50%;
-  top:105px;
-  max-width: 650px;
-  size: 1.5rem;
+  size: .2rem;
   font-weight: 300;
-  text-align: justify;
-  display: block;
-  margin: 0 auto;
-  transform: translateX(-50%);
-  white-space: normal;
 }
 
+
+
 @media (max-width: 790px) {
-  .opener, .openingP {
+   .openingP {
     font-size: 12px;
   }
 }
 
 @media (min-width: 800px) and (max-width: 1444px) {
-  .opener, .openingP, .myImage {
+   .openingP, .myImage {
     font-size: 16px;
   }
 }
 
+
+
 .openingP{ 
-position:fixed;
   font-family: 'Merriweather',serif;
-  left: 50%;
-  top: 175px;
-  width: auto;
-  transform: translateX(-50%);
   max-width: 650px; /* Limits the width so it doesn't stretch too much */
-  margin: 0 auto; /* Centers the paragraph */
-  padding-left: auto;
-  padding-right: auto;
   line-height: 1.5; /* Improves readability */
   text-align: left; /* Makes both sides aligned */
   display: block;
   transition: all 0.3s ease-in-out; /* Adds smooth transitions for any changes */
-  white-space: n;
+}
+
+
+@media (min-width: 1200px) {
+  .container{
+    max-width: 970px;
+
+    /* Centering everthing in the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 
 
 
 
-.myImage{
-  width: 43px;
-  height: 57px;
-  position: fixed;
-  image-rendering: auto;
-  top: 100px;
-  left: 1025px;
-}
