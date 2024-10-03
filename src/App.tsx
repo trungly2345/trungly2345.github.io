@@ -2,8 +2,7 @@ import React from "react";
 import "./App.css";
 import il from "./assets/li.svg";
 import github from "./assets/github.png";
-import mycomp from "./assets/My Computer.svg";
-import t from "./assets/me.svg";
+
 import Button from "./components/Button";
 
 const App: React.FC = () => {
@@ -21,16 +20,17 @@ const App: React.FC = () => {
       <a
         href="https://www.linkedin.com/in/trung-ly-30151b184/"
         target="blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+      >
         <img
           src={il}
           alt="LinkedIn"
           className="li.svg"
           style={{
-            position: "fixed",
+            position: "relative",
             width: "60px",
             height: "36px",
-            top: "60px",
+            top: "10px",
             left: "115px",
             imageRendering: "auto",
           }}
@@ -48,15 +48,14 @@ const App: React.FC = () => {
           className="github.png"
           style={{
             imageRendering: "auto",
-            position: "fixed",
+            position: "relative",
             width: "45px",
             height: "36px",
-            top: "60px",
-            left: "170px",
+            top: "10px",
+            left: "110px",
           }}
         />
       </a>
-      <img src={mycomp} className="myImage" />
       <div className="container text-center">
         <h1 className="opener"> Welcome to my portfolio website!</h1>
         <p className="openingP">
@@ -64,15 +63,16 @@ const App: React.FC = () => {
           Computer Science at Iowa State University. I'm seeking an internship
           to enhance my skills in mobile app development and broader computer
           science roles.
-          <br></br>
-          <br></br>
+        </p>
+
+        <p className="openingP">
           Passionate about technology's role in shaping society, I aim to
           contribute to innovations that improve everyday life. Let's connect to
           explore how I can bring my skills and enthusiasm to a dynamic team.
         </p>
 
         {/* Contact and download button */}
-        <div className="d-grid gap-2 d-md-block">
+        <div className="btn-group gap-5">
           <Button
             whenClicked={() => {
               console.log("clicked");
@@ -82,17 +82,6 @@ const App: React.FC = () => {
           <Button whenClicked={() => {}} msg="Download CV" />
         </div>
       </div>
-      <img
-        src={t}
-        alt="Trung Ly"
-        className="me.svg"
-        style={{
-          position: "fixed",
-          left: "1122px",
-          top: "76px",
-          imageRendering: "-moz-crisp-edges",
-        }}
-      />
     </div>
   );
 };

@@ -1,14 +1,33 @@
 /* App.css */
-:root{
-  --background-color: #DADADA;
+
+
+body{
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(90deg,#B993D6, #8ca6db);
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
 }
 
 
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 
 .nametxt {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
   color: black;          /* Text color */
@@ -23,21 +42,19 @@
 
 
 .opener{
-  font-family: 'Merriweather', serif;  
-  size: .2rem;
-  font-weight: 300;
+  font-family: 'system-ui';
+  font-size: 350%;
+  color:  #1A1A80;
+  font-weight:150;
+  margin: 115px;
+  margin-bottom: 45px;
+ 
 }
 
 
-
-@media (max-width: 790px) {
-   .openingP {
-    font-size: 12px;
-  }
-}
 
 @media (min-width: 800px) and (max-width: 1444px) {
-   .openingP, .myImage {
+   .openingP {
     font-size: 16px;
   }
 }
@@ -48,24 +65,30 @@
   font-family: 'Merriweather',serif;
   max-width: 650px; /* Limits the width so it doesn't stretch too much */
   line-height: 1.5; /* Improves readability */
-  text-align: left; /* Makes both sides aligned */
-  display: block;
+  margin-bottom: 25px;
+  color: black;
+  font-weight: 135;
+  display: flex;
   transition: all 0.3s ease-in-out; /* Adds smooth transitions for any changes */
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
 }
 
 
 @media (min-width: 1200px) {
   .container{
     max-width: 970px;
+    
 
     /* Centering everthing in the container */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    
 }
-
+}
 
 
 
