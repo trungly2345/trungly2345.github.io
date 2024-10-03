@@ -5,11 +5,23 @@ import github from "./assets/github.png";
 import { useState } from "react";
 import Button from "./components/Button";
 
+
 const App: React.FC = () => {
-  const [hoveredLinkedIn,setHoveredLinkedIn] = useState<boolean>(false);
-  const [hoveredGitHub,setHoveredGitHub] = useState<boolean>(false);
-  
-  
+  const [hoveredLinkedIn, setHoveredLinkedIn] = useState<boolean>(false);
+  const [hoveredGitHub, setHoveredGitHub] = useState<boolean>(false);
+  const FileUrl = "src/ResumeTLy.pdf";
+
+  const saveFile = () => {
+    
+    const anchor = document.createElement('a');
+    anchor.href = FileUrl;
+    anchor.href = FileUrl;
+    anchor.download = 'CV_Trung_Ly.pdf';
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  }
+
   // 1 Lifecycle methods (Hooks) - useState(), useEffect()
   // 2 Making components
 
@@ -19,9 +31,7 @@ const App: React.FC = () => {
 
   // 3 LEARN ABOUT FLEX BOX!!
 
-  
   return (
-   
     <div>
       <text className="nametxt">TrungLy.io</text>
       <a
@@ -34,10 +44,10 @@ const App: React.FC = () => {
           alt="LinkedIn"
           className="li.svg"
           style={{
-            transform: hoveredLinkedIn ? 'scale(1.2)' : 'scale(1)',
+            transform: hoveredLinkedIn ? "scale(1.2)" : "scale(1)",
             opacity: hoveredLinkedIn ? 1 : 1,
-          
-            transition: 'transform 0.3s, opacity .1s',
+
+            transition: "transform 0.3s, opacity .1s",
             position: "relative",
             width: "60px",
             height: "36px",
@@ -60,10 +70,10 @@ const App: React.FC = () => {
           alt="GitHub"
           className="github.png"
           style={{
-            transform: hoveredGitHub ? 'scale(1.2)' : 'scale(1)',
+            transform: hoveredGitHub ? "scale(1.2)" : "scale(1)",
             opacity: hoveredGitHub ? 1 : 1,
-            
-            transition: 'transform 0.3s, opacity .1s',
+
+            transition: "transform 0.3s, opacity .1s",
             imageRendering: "auto",
             position: "relative",
             width: "45px",
@@ -98,7 +108,14 @@ const App: React.FC = () => {
             }}
             msg="Contact Me"
           />
-          <Button whenClicked={() => {}} msg="Download CV" />
+          <Button 
+          whenClicked={() => {
+            console.log("CV downloaded!")
+            saveFile();
+
+          }} msg="Download CV" 
+
+            />
         </div>
       </div>
     </div>
