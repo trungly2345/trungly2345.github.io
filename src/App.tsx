@@ -2,10 +2,14 @@ import React from "react";
 import "./App.css";
 import il from "./assets/li.svg";
 import github from "./assets/github.png";
-
+import { useState } from "react";
 import Button from "./components/Button";
 
 const App: React.FC = () => {
+  const [hoveredLinkedIn,setHoveredLinkedIn] = useState<boolean>(false);
+  const [hoveredGitHub,setHoveredGitHub] = useState<boolean>(false);
+  
+  
   // 1 Lifecycle methods (Hooks) - useState(), useEffect()
   // 2 Making components
 
@@ -14,9 +18,12 @@ const App: React.FC = () => {
   // Then send yourself an email based of the data
 
   // 3 LEARN ABOUT FLEX BOX!!
+
+  
   return (
+   
     <div>
-      <h5 className="nametxt">Trung Ly</h5>
+      <text className="nametxt">TrungLy.io</text>
       <a
         href="https://www.linkedin.com/in/trung-ly-30151b184/"
         target="blank"
@@ -27,13 +34,19 @@ const App: React.FC = () => {
           alt="LinkedIn"
           className="li.svg"
           style={{
+            transform: hoveredLinkedIn ? 'scale(1.2)' : 'scale(1)',
+            opacity: hoveredLinkedIn ? 1 : 1,
+          
+            transition: 'transform 0.3s, opacity .1s',
             position: "relative",
             width: "60px",
             height: "36px",
-            top: "10px",
-            left: "115px",
+            top: "-10px",
+            left: "10px",
             imageRendering: "auto",
           }}
+          onMouseEnter={() => setHoveredLinkedIn(true)}
+          onMouseLeave={() => setHoveredLinkedIn(false)}
         />
       </a>
 
@@ -47,13 +60,19 @@ const App: React.FC = () => {
           alt="GitHub"
           className="github.png"
           style={{
+            transform: hoveredGitHub ? 'scale(1.2)' : 'scale(1)',
+            opacity: hoveredGitHub ? 1 : 1,
+            
+            transition: 'transform 0.3s, opacity .1s',
             imageRendering: "auto",
             position: "relative",
             width: "45px",
             height: "36px",
-            top: "10px",
-            left: "110px",
+            top: "-10px",
+            left: "11px",
           }}
+          onMouseEnter={() => setHoveredGitHub(true)}
+          onMouseLeave={() => setHoveredGitHub(false)}
         />
       </a>
       <div className="container text-center">

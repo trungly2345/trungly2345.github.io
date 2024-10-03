@@ -4,12 +4,10 @@
 body{
   overflow: hidden;
   height: 100vh;
-  margin: 0;
-  background: linear-gradient(90deg,#B993D6, #8ca6db);
+  background: linear-gradient(15deg, #c9def4, #d7c1e8, #f5ccd4, #e6b3b3, #b8a4c9);
   background-size: 300% 300%;
   animation: gradient 20s ease infinite;
 }
-
 
 
 @keyframes gradient {
@@ -31,12 +29,12 @@ body{
   width: 100%;
   height: 100%;
   color: black;          /* Text color */
-  font-size: 24px;      /* Font size */
-  font-family: 'Merriweather', serif;  
-  font-weight: 300;     /* Light font weight */
+  font-size: 35px;      /* Font size */
+  font-family: "Source Code Pro", monospace;  
+  font-weight: 100;     /* Light font weight */
   word-wrap: break-word; /* Break long words */
-  top: 16px;
-  left: 118.5px;
+  top: -3px;
+  left: 9.5px;
   right: 1137px;
 }
 
@@ -48,6 +46,7 @@ body{
   font-weight:150;
   margin: 115px;
   margin-bottom: 45px;
+  word-break: normal;
  
 }
 
@@ -67,12 +66,11 @@ body{
   line-height: 1.5; /* Improves readability */
   margin-bottom: 25px;
   color: black;
-  font-weight: 135;
+  font-weight: 300;
   display: flex;
   transition: all 0.3s ease-in-out; /* Adds smooth transitions for any changes */
-  
+  word-wrap: break-word;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  
 }
 
 
@@ -88,6 +86,7 @@ body{
     align-items: center;
     
 }
+
 }
 
 

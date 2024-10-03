@@ -17,7 +17,7 @@ const Button = ({whenClicked, msg}: ButtonProps) => {
     //   <button className ="btn btn-outline-secondary">Contact Me</button>
     //   <button className ="btn btn-outline-secondary">Download CV</button>
     // </div>
-    <button onClick={whenClicked} className ="btn btn-outline-dark btn rounded-pill" style={{padding: "20px",}}> 
+    <button onClick={whenClicked} className ="btn btn-outline-dark btn rounded-pill" style={{padding: "10px",fontFamily:"monospace"}}> 
       {msg}
     </button>
   )
