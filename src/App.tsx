@@ -9,16 +9,13 @@ import me from "./assets/me.jpeg";
 const App: React.FC = () => {
   const [hoveredLinkedIn, setHoveredLinkedIn] = useState<boolean>(false);
   const [hoveredGitHub, setHoveredGitHub] = useState<boolean>(false);
-  const FileUrl = "src/ResumeTLy.pdf";
+  const FileUrl = "https://docs.google.com/document/d/1aQwSdBPbMyvyL6wF4sI6zgu16vu4bDYBcRXNVFO-KDY/edit?usp=sharing";
+ 
 
-  const saveFile = () => {
-    const anchor = document.createElement("a");
-    anchor.href = FileUrl;
-    anchor.href = FileUrl;
-    anchor.download = "CV_Trung_Ly.pdf";
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
+ 
+
+  const openGoogleDriveLink = () => {
+    window.open(FileUrl, "_blank");
   };
 
   // 1 Lifecycle methods (Hooks) - useState(), useEffect()
@@ -85,7 +82,7 @@ const App: React.FC = () => {
         />
       </a>
       <div className="container text-center">
-        <h1 className="opener"> Welcome to my portfolio website!</h1>
+        <h1 className="opener"> Welcome to my portfolio website</h1>
 
         <img className="border border-black border-2 border-opacity-50"
           src={me}
@@ -98,35 +95,45 @@ const App: React.FC = () => {
         />
         
         
-        <p className="openingP">
+        <p className="openingP border border-dark">
           Hi, I'm Trung, a first-generation Vietnamese student and Senior in
           Computer Science at Iowa State University. I'm seeking an internship
           to enhance my skills in mobile and web app development and broader computer
           science roles.
-        </p>
-
-        <p className="openingP">
+        
+          <br>
+          </br>
+          <br>
+          </br>
+       
           Passionate about technology's role in shaping society, I aim to
           contribute to innovations that improve everyday life. Let's connect to
           explore how I can bring my skills and enthusiasm to a dynamic team.
+         
+        
         </p>
-
-        {/* Contact and download button */}
-        <div className="btn-group gap-5">
+     {/* Contact and download button */}
+     <div className="btn-group gap-5">
           <Button
             whenClicked={() => {
-              console.log("clicked");
+              console.log("contact me button clicked");
             }}
             msg="Contact Me"
           />
           <Button
             whenClicked={() => {
+              console.log("download cv button clicked");
               console.log("CV downloaded!");
-              saveFile();
-            }}
-            msg="Download CV"
+              openGoogleDriveLink();
+              
+            
+
+            } }
+           
+            msg="View Resume"
           />
         </div>
+     
       </div>
     </div>
   );
