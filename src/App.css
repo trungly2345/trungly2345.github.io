@@ -2,12 +2,14 @@
 
 
 body{
-  overflow: hidden;
-  height: 100vh;
-  background: linear-gradient(15deg, #c9def4, #d7c1e8, #f5ccd4, #e6b3b3, #b8a4c9);
+  overflow: auto;
+  width: 100%;
+  height: 130vh;
+  background: linear-gradient(135deg, #c9def4, #d7c1e8, #f5ccd4, #e6b3b3, #b8a4c9);
   background-size: 300% 300%;
-  animation: gradient 20s ease infinite;
+  animation: gradient 20s ease-in-out infinite alternate;
 }
+
 
 
 @keyframes gradient {
@@ -41,11 +43,11 @@ body{
 
 .opener{
   font-family: 'system-ui';
-  font-size: 350%;
-  color:  #1A1A80;
+  font-size: 330%;
+  color: #242b4b;
   font-weight:150;
-  margin: 95px;
-  margin-bottom: 45px;
+  margin: 40px;
+  margin-bottom: 40px;
   word-break: normal;
  
 }
@@ -64,9 +66,10 @@ body{
   font-family: 'Merriweather',serif;
   max-width: 650px; /* Limits the width so it doesn't stretch too much */
   line-height: 1.5; /* Improves readability */
-  margin-bottom: 25px;
-  font-size: larger;
-  color: black;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  font-size: 110%;
+  color: #242b4b;
   font-weight: 300;
   display: flex;
   transition: all 0.3s ease-in-out; /* Adds smooth transitions for any changes */
@@ -86,9 +89,13 @@ body{
     justify-content: center;
     align-items: center;
     
+    
 }
 
+
+
 }
+
 
 
 

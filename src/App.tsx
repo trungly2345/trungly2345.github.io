@@ -4,7 +4,7 @@ import il from "./assets/li.svg";
 import github from "./assets/github.png";
 import { useState } from "react";
 import Button from "./components/Button";
-
+import me from "./assets/me.jpeg";
 
 const App: React.FC = () => {
   const [hoveredLinkedIn, setHoveredLinkedIn] = useState<boolean>(false);
@@ -12,15 +12,14 @@ const App: React.FC = () => {
   const FileUrl = "src/ResumeTLy.pdf";
 
   const saveFile = () => {
-    
-    const anchor = document.createElement('a');
+    const anchor = document.createElement("a");
     anchor.href = FileUrl;
     anchor.href = FileUrl;
-    anchor.download = 'CV_Trung_Ly.pdf';
+    anchor.download = "CV_Trung_Ly.pdf";
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
-  }
+  };
 
   // 1 Lifecycle methods (Hooks) - useState(), useEffect()
   // 2 Making components
@@ -33,7 +32,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <text className="nametxt">TrungLy.io</text>
+      <text className="nametxt">trungly.io</text>
       <a
         href="https://www.linkedin.com/in/trung-ly-30151b184/"
         target="blank"
@@ -61,7 +60,7 @@ const App: React.FC = () => {
       </a>
 
       <a
-        href="https://github.com/trungly2345/portfolioWebApp"
+        href="https://github.com/trungly2345"
         target="blank"
         rel="noopener noreferrer"
       >
@@ -87,10 +86,22 @@ const App: React.FC = () => {
       </a>
       <div className="container text-center">
         <h1 className="opener"> Welcome to my portfolio website!</h1>
+
+        <img className="border border-black border-2 border-opacity-50"
+          src={me}
+          style={{
+            borderRadius: "50%",
+            width: "25%",
+            height: "25%",
+            marginTop: "-10px",
+          }}
+        />
+        
+        
         <p className="openingP">
           Hi, I'm Trung, a first-generation Vietnamese student and Senior in
           Computer Science at Iowa State University. I'm seeking an internship
-          to enhance my skills in mobile app development and broader computer
+          to enhance my skills in mobile and web app development and broader computer
           science roles.
         </p>
 
@@ -108,14 +119,13 @@ const App: React.FC = () => {
             }}
             msg="Contact Me"
           />
-          <Button 
-          whenClicked={() => {
-            console.log("CV downloaded!")
-            saveFile();
-
-          }} msg="Download CV" 
-
-            />
+          <Button
+            whenClicked={() => {
+              console.log("CV downloaded!");
+              saveFile();
+            }}
+            msg="Download CV"
+          />
         </div>
       </div>
     </div>
