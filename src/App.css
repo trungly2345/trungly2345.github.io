@@ -43,7 +43,6 @@ body{
 
 
 .opener{
-  
   backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 10px;
@@ -68,7 +67,7 @@ body{
 
 
 .openingP{ 
-  
+  box-shadow: 2px 2px;
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 10px;

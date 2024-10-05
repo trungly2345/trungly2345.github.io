@@ -84,9 +84,10 @@ const App: React.FC = () => {
       <div className="container text-center">
         <h1 className="opener"> Welcome to my portfolio website</h1>
 
-        <img className="border border-black border-2 border-opacity-50"
+        <img
           src={me}
           style={{
+            boxShadow:"2px 2px 2px 2px",
             borderRadius: "50%",
             width: "25%",
             height: "25%",
